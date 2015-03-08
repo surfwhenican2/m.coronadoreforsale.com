@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
 	<script src="jquery.mobile-1.4.5/jquery-1.11.2.min.js"></script>
 	<script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="customSearch.js"></script>
 </head>
 <body>
 
@@ -65,22 +66,22 @@
 			<div>
 				<fieldset data-role="controlgroup" data-type="horizontal">
 					<legend>Tap to Select Areas in Coronado.</legend>
-					<input type="checkbox" name="checkbox-h-2a" id="checkbox-h-2a" data-iconpos="right">
-					<label for="checkbox-h-2a">Village</label>
-					<input type="checkbox" name="checkbox-h-2b" id="checkbox-h-2b">
-					<label for="checkbox-h-2b">Cays</label>
-					<input type="checkbox" name="checkbox-h-2c" id="checkbox-h-2c">
-					<label for="checkbox-h-2c">Shores</label>
+					<input type="checkbox" name="checkbox-village" id="checkbox-village" data-iconpos="right">
+					<label for="checkbox-village">Village</label>
+					<input type="checkbox" name="checkbox-cays" id="checkbox-cays">
+					<label for="checkbox-cays">Cays</label>
+					<input type="checkbox" name="checkbox-shores" id="checkbox-shores">
+					<label for="checkbox-shores">Shores</label>
 			</fieldset>
 			<div class="ui-field-contain">
-				<label for="text-12">Minimum Beds:</label>
-				<input type="number" name="text-12" id="text-12" value="" placeholder="1"> 
+				<label for="minBeds">Minimum Beds:</label>
+				<input type="number" name="minBeds" id="minBeds" value="" placeholder="1"> 
 			</div>
 			<div class="ui-field-contain">
-				<label for="text-12">Max Price: ($)</label>
-				<input type="number" name="text-12" id="text-12" value="" placeholder="50,000,000"> 
+				<label for="maxPrice">Max Price: ($)</label>
+				<input type="number" name="mxPrice" id="maxPrice" value="50,000,000"> 
 			</div>
-				<input type="submit" value="Search">
+				<input id="submitSearch" type="submit" value="Search">
 			</div>
 		</div><!-- /content -->
 
@@ -94,7 +95,6 @@
 				</ul>
 			</div><!-- /navbar -->
 		</div><!-- /footer -->
-	</div><!-- /page -->
 	</div><!-- /page -->
 
 	<div data-role="page" id="newlistings">
