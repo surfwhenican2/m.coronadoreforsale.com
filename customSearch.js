@@ -36,5 +36,5 @@ document.getElementById('submitSearch').onclick = function() {
 
     }
 
-    return false;
+    //return false;
 };
