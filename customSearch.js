@@ -6,11 +6,12 @@ document.getElementById('submitSearch').onclick = function() {
 
     $.ajax({
             type:'GET',
-            beforeSend: function (request){
-                request.setRequestHeader('accesskey','gY15jJpvJI_GyFnANULFsi');
-                request.setRequestHeader('ancillarykey','gY15jJpvJI_GyFnANULFsi');
-            },
+            //beforeSend: function (request){
+            //    request.setRequestHeader('accesskey','gY15jJpvJI_GyFnANULFsi');
+            //    request.setRequestHeader('ancillarykey','gY15jJpvJI_GyFnANULFsi');
+            //},
             url: url2,
+            headers: {'accesskey':'gY15jJpvJI_GyFnANULFsi'},
             contentType :'application/x-www-form-urlencoded',
             dataType:'jsonp',
             success:function(msg){
