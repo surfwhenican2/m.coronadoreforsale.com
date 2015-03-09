@@ -39,6 +39,10 @@ document.getElementById('submitSearch').onclick = function() {
                 console.log("Error");
                 console.log(error);
             }
+        }).done(function(data){
+            console.log("Done");
+            console.log("Sample Data:",data);
+
         });
 
     return false;
