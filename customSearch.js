@@ -8,6 +8,7 @@ document.getElementById('submitSearch').onclick = function() {
             type:'GET',
             beforeSend: function (request){
                 request.setRequestHeader('accesskey','gY15jJpvJI_GyFnANULFsi');
+                request.setRequestHeader('ancillarykey','gY15jJpvJI_GyFnANULFsi');
             },
             url: url2,
             contentType :'application/x-www-form-urlencoded',
