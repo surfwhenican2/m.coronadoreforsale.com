@@ -12,7 +12,7 @@ document.getElementById('submitSearch').onclick = function() {
             },
             url: url2,
             contentType :'application/x-www-form-urlencoded',
-            dataType:'jsonp',
+            dataType:'json',
             success:function(msg){
                 console.log("Success");
                 console.log(msg);
