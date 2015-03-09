@@ -1,7 +1,7 @@
 document.getElementById('submitSearch').onclick = function() {
 
     //var url2 = "https://api.idxbroker.com/mls/zipcodes/b010?zipcode=92118";
-    var url2 = "https://api.idxbroker.com/mls/zipcodes?callback=?";
+    var url2 = "https://api.idxbroker.com/mls/zipcodes/idxID=b010?zipcode=92118&callback=?";
     console.log(url2);
 
     $.ajax({
