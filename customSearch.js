@@ -1,7 +1,7 @@
 document.getElementById('submitSearch').onclick = function() {
 
     //var url2 = "https://api.idxbroker.com/mls/zipcodes/b010?zipcode=92118";
-    var url2 = "https://api.idxbroker.com/mls/zipcodes/b010?zipcode=92118";
+    var url2 = "https://api.idxbroker.com/mls/zipcodes";
 
     $.ajax({
             type:'GET',
@@ -10,7 +10,7 @@ document.getElementById('submitSearch').onclick = function() {
             },
             url: url2,
             contentType :'application/x-www-form-urlencoded',
-            dataType:'application/json',
+            dataType:'jsonp',
             success:function(msg){
                 console.log("Success");
                 console.log(msg);
