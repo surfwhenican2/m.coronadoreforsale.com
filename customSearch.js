@@ -9,6 +9,7 @@ document.getElementById('submitSearch').onclick = function() {
             beforeSend: function (request){
                 request.setRequestHeader('accesskey','gY15jJpvJI_GyFnANULFsi');
                 request.setRequestHeader('ancillarykey','gY15jJpvJI_GyFnANULFsi');
+                request.setRequestHeader("Access-Control-Allow-Origin", "*");
             },
             url: url2,
             contentType :'application/x-www-form-urlencoded',
