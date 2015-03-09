@@ -1,7 +1,7 @@
 document.getElementById('submitSearch').onclick = function() {
     var minBeds = document.getElementById('minBeds').value;
     var maxPrice = document.getElementById('maxPrice').value;
-    var url2 = "https://api.idxbroker.com/mls/zipcodes/b010?";
+    var url2 = "https://api.idxbroker.com/mls/zipcodes/b010";
     var url = "";
     url += "hp="+maxPrice;
     url += "&bd="+minBeds;
@@ -26,7 +26,7 @@ document.getElementById('submitSearch').onclick = function() {
             url: url2,
             data: {},
             contentType :'application/x-www-form-urlencoded',
-            dataType:'json',
+            dataType:'jsonp',
             processData:false,
             success:function(msg){
                 console.log(msg);
