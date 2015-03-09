@@ -1,7 +1,24 @@
 document.getElementById('submitSearch').onclick = function() {
-
+    var minBeds = document.getElementById('minBeds').value;
+    var maxPrice = document.getElementById('maxPrice').value;
     //var url2 = "https://api.idxbroker.com/mls/zipcodes/b010?zipcode=92118";
-    var url2 = "https://api.idxbroker.com/mls/zipcodes/b010";
+    var url2 = "https://api.idxbroker.com/mls/listmethods?callback=myFunction";
+    var url = "";
+    url += "hp="+maxPrice;
+    url += "&bd="+minBeds;
+    var cays = document.getElementById("checkbox-cays").checked;
+    var village = document.getElementById("checkbox-village").checked;
+    var shores = document.getElementById("checkbox-shores").checked;
+    if (cays == true){
+        url += "&a_community%5B%5D=CORONADO+CAYS"
+    }
+    if (village == true){
+        url +=  "&a_community%5B%5D=CORONADO+VILLAGE"
+    }
+    if (shores== true){
+        url += "&a_community%5B%5D=CORONADO+SHORES"
+    }
+    //window.open(url,"_self");
 
     $.ajax({type:"GET",
             beforeSend: function (request){
@@ -11,9 +28,11 @@ document.getElementById('submitSearch').onclick = function() {
             data: {},
             contentType :'application/x-www-form-urlencoded',
             dataType:'jsonp',
+            //processData:false,
             success:function(msg){
                 console.log("Success");
                 console.log(msg);
+                console.log(msg.length);
 
             },
             error:function(error){
@@ -26,7 +45,7 @@ document.getElementById('submitSearch').onclick = function() {
 
         });
 
-    function callbackFunction(data){
+    function myFunction(data){
         console.log("Done");
         console.log("Sample Data:",data);
         console.log(data);
