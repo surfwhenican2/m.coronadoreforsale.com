@@ -1,7 +1,7 @@
 document.getElementById('submitSearch').onclick = function() {
 
     //var url2 = "https://api.idxbroker.com/mls/zipcodes/b010?zipcode=92118";
-    var url2 = "https://api.idxbroker.com/mls/zipcodes/idxID=b010&callback=?";
+    var url2 = "https://api.idxbroker.com/mls/zipcodes/idxID=b010&callback=callbackFunction";
     console.log(url2);
 
     $.ajax({
@@ -16,7 +16,6 @@ document.getElementById('submitSearch').onclick = function() {
             success:function(msg){
                 console.log("Success");
                 console.log(msg);
-
             },
             error:function(error){
                 console.log("Error");
@@ -34,6 +33,4 @@ document.getElementById('submitSearch').onclick = function() {
         console.log(data);
 
     }
-
-    //return false;
 };
