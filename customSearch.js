@@ -2,7 +2,7 @@ document.getElementById('submitSearch').onclick = function() {
     var minBeds = document.getElementById('minBeds').value;
     var maxPrice = document.getElementById('maxPrice').value;
     //var url2 = "https://api.idxbroker.com/mls/zipcodes/b010?zipcode=92118";
-    var url2 = "https://api.idxbroker.com/mls/listmethods";
+    var url2 = "https://api.idxbroker.com/mls/listmethods?callback=myFunction";
     var url = "";
     url += "hp="+maxPrice;
     url += "&bd="+minBeds;
@@ -44,6 +44,13 @@ document.getElementById('submitSearch').onclick = function() {
             console.log("Sample Data:",data);
 
         });
+
+    function myFunction(data){
+        console.log("Done");
+        console.log("Sample Data:",data);
+        console.log(data);
+
+    }
 
     return false;
 };
