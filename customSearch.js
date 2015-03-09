@@ -1,7 +1,8 @@
 document.getElementById('submitSearch').onclick = function() {
     var minBeds = document.getElementById('minBeds').value;
     var maxPrice = document.getElementById('maxPrice').value;
-    var url2 = "https://api.idxbroker.com/mls/zipcodes/b010?zipcode=92118";
+    //var url2 = "https://api.idxbroker.com/mls/zipcodes/b010?zipcode=92118";
+    var url2 = "https://api.idxbroker.com/mls/listmethods";
     var url = "";
     url += "hp="+maxPrice;
     url += "&bd="+minBeds;
