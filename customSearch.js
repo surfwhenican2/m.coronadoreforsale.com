@@ -28,7 +28,7 @@ document.getElementById('submitSearch').onclick = function() {
             data: {},
             contentType :'application/x-www-form-urlencoded',
             dataType:'jsonp',
-            processData:false,
+            //processData:false,
             success:function(msg){
                 console.log(msg);
             },
